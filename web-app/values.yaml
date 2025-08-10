@@ -4,4 +4,4 @@ environment: dev
 image:
   repository: cheulong/
   pullPolicy: IfNotPresent
-  tag: "latest"
+  tag: 21cc4e57
