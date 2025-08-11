@@ -1,0 +1,7 @@
+name: movies-finder-web
+replicaCount: 1
+environment: staging
+image:
+  repository: cheulong/
+  pullPolicy: IfNotPresent
+  tag: "latest"
