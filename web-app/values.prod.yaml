@@ -4,4 +4,4 @@ environment: prod
 image:
   repository: cheulong/
   pullPolicy: IfNotPresent
-  tag: "latest"
+  tag:   adff7812
