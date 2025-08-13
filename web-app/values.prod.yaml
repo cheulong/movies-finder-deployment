@@ -5,3 +5,4 @@ image:
   repository: cheulong/
   pullPolicy: IfNotPresent
   tag:   adff7812
+nodePort: 30003
