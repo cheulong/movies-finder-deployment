@@ -4,5 +4,5 @@ environment: dev
 image:
   repository: cheulong/
   pullPolicy: IfNotPresent
-  tag: adff7812
+  tag: 66de0d7c
 nodePort: 30001
