@@ -27,3 +27,12 @@ spec:
           limits:
             cpu: "100m"
             memory: "128Mi"
+        envFrom:
+        {{- if .Values.envFrom.configMap }}
+            - configMapRef:
+                name: {{ .Values.envFrom.configMap }}
+            {{- end }}
+            {{- if .Values.envFrom.secret }}
+            - secretRef:
+                name: {{ .Values.envFrom.secret }}
+            {{- end }}
