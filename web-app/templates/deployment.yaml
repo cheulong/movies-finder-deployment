@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.name }}-container-{{ .Values.environment }}
-        image: cheulong/movies-finder-frontend:latest
+        image: cheulong/movies-finder-frontend:{{ .Values.image.tag }}
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
