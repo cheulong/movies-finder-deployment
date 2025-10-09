@@ -4,7 +4,7 @@ environment: prod
 image:
   repository: cheulong/
   pullPolicy: IfNotPresent
-  tag:   6d681fd8
+  tag:   3e08eb5a
 nodePort: 30003
 envFrom:
   configMap: movies-finder-configmap
