@@ -7,5 +7,4 @@ image:
   tag:   3e08eb5a
 nodePort: 30003
 envFrom:
-  configMap: movies-finder-configmap
   secret: myapp-secrets
