@@ -1,0 +1,19 @@
+# loki-pv.yaml
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: storage-loki-0
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: ''
+  claimRef:
+    namespace: monitoring
+    name: storage-loki-0
+  hostPath:
+    path: "/mnt/data/loki"
+    type: DirectoryOrCreate
