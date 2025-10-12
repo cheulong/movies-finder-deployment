@@ -1,19 +1,23 @@
-# loki-pv.yaml
-
+---
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: storage-loki-0
+  name: loki-local-pv
 spec:
   capacity:
     storage: 1Gi
+  volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: ''
-  claimRef:
-    namespace: monitoring
-    name: storage-loki-0
-  hostPath:
-    path: "/mnt/data/loki"
-    type: DirectoryOrCreate
+  storageClassName: local-storage
+  local:
+    path: /mnt/disks/loki
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - worker-node-1
