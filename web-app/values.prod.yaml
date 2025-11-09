@@ -4,7 +4,7 @@ environment: prod
 image:
   repository: cheulong/
   pullPolicy: IfNotPresent
-  tag: 4dfd763b
+  tag: 92342db6
 nodePort: 30003
 envFrom:
   secret: myapp-secrets
